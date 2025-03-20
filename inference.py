@@ -2,10 +2,10 @@ import torch
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 
 # Path to the saved model
-MODEL_PATH = "./sentiment_model"
+MODEL_NAME = "ajikadev/circleci-nlp-model"
 # Load the tokenizer and model
 tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
-model = DistilBertForSequenceClassification.from_pretrained(MODEL_PATH)
+model = DistilBertForSequenceClassification.from_pretrained(MODEL_NAME)
 
 # Set model to evaluation mode
 model.eval()
